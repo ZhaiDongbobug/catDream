@@ -1,0 +1,26 @@
+@charset "UTF-8";
+<style>
+td{
+ background-color:gray;	
+}
+//td{}指的是对<td></td>之间的内容设置
+</style>
+
+<table border="1">
+ <tr>
+   <td>1</td>
+   <td>2</td>
+ </tr>
+ //tr是换行的td也是换行的
+ <tr>
+   <td>3</td>
+   <td>4</td>
+ </tr>
+ 
+ <tr>
+   <td>a</td>
+   <td>b</td>
+ </tr>
+
+</table>//此标签有border(规定表格边框的宽度。)和bgcolor
+
