@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function calc(){
+	var firstItem = document.getElementById("num1").value;
+	var secondItem = document.getElementById("num2").value;
+	firstItem = parseFloat(firstItem);
+	secondItem = parseFloat(secondItem);
+	var result = firstItem + secondItem;
+	document.getElementById("result").value=result;
+}
+</script>
+<input type="text" id="num1" value=""></input>
++
+<input type="text" id="num2" value=""></input>
+=
+<input type="text" id="result" value=""></input>
+<input type="button" value="运算" onclick="calc()" >
+</body>
+</html>

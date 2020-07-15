@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function getResult(){
+	var source = $("source");
+	
+	var search = $("search");
+	var replace = $("replace");
+	var regs = new RegExp(search,"g");
+	var result = source.replace(regs,replace);
+	setValue("dest",result);
+}
+function $(id){
+	return document.getElementById(id).value;
+}
+function setValue(id,value){
+	document.getElementById(id).value=value;
+}
+</script>
+<body>
+<table>
+	<tr>
+		<td>源字符串:</td>
+		<td><textarea id="source"></textarea></td>
+	</tr>
+	<tr>
+		<td>查询:</td>
+		<td><input type="text" id="search" value=""></td>
+	</tr>
+	<tr>
+		<td>替换为:</td>
+		<td><input type="text" id="replace" value=""></td>
+	</tr>
+	<tr>
+		<td>替换结果为:</td>
+		<td><textarea id="dest"></textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="button" value="替换" onclick="getResult()"></td>
+	</tr>
+</table>
+</body>
+</html>

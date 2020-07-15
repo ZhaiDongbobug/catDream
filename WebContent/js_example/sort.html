@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function p(s){
+	document.write(s);
+	document.write("<br>");
+}
+function check(value,x){
+	for(i in x){
+		if(value==x[i]){
+			return true;
+		}
+	}
+	return false;
+}
+function uniqSort(x){
+	var y = new Array();
+	while(x.length!=0){
+		var v = x.pop();
+		if(!check(v,x)){
+			y.push(v);
+		}
+	}
+	return y;
+}
+
+var x = new Array(3,1,4,1,5,9,2,6);
+p('数组x是:'+x);
+x=uniqSort(x);
+x.sort();
+p('使用sort排序后的无重复数据的数组x是:'+x);
+
+</script>
+<body>
+</body>
+</html>

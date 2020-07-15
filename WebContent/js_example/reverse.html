@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+
+function getvalue(id){
+	return document.getElementById(id).value;
+}
+
+function setvalue(id,value){
+	document.getElementById(id).value=value;
+}
+
+function ByWord(){
+	var src = getvalue("src");//src是基本类型string
+	var wodArray = src.split(" ");
+	wodArray.sort();
+	var order = wodArray.join(" ");
+	setvalue("order",order); 
+	wodArray.reverse();
+	var reorder = wodArray.join(" ");
+	setvalue("reorder",reorder); 
+}
+function ByLetter(){
+	var src = getvalue("src");
+	
+	var letArray = src.split("");
+	letArray.sort();
+	var order = letArray.join("");
+	setvalue("order",order);
+	letArray.reverse();
+	var reorder = letArray.join("");
+	setvalue("reorder",reorder);
+	//var ftrArry = strArry;//思考：对strArry操作是否会影响ftrArry
+	//document.getElementById("order").value = strArry.toString();//思考：是对地址的操作还是对地址处的内
+}
+</script>
+<body>
+<table>
+	<tr>
+		<td>随机输入英文字符串:</td>
+		<td><textarea id="src"></textarea></td>
+	</tr>
+	<tr>
+		<td>正排序结果：</td>
+		<td><textarea id="order"></textarea></td>
+	</tr>
+	<tr>
+		<td>倒排序结果：</td>
+		<td><textarea id="reorder"></textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" value="按照字母排序" onclick="ByLetter()"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" value="按照单词排序" onclick="ByWord()"></td>
+	</tr>
+</table>
+</body>
+</html>
