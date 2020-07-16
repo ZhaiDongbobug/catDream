@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<p>每隔1秒钟，通过document.write打印当前时间</p>
+ 
+<script>
+ 
+function printTime(){
+  var d = new Date();
+  document.write(d.getHours());
+  document.write(":");
+  document.write(d.getMinutes());
+  document.write(":");
+  document.write(d.getSeconds());
+  document.close();
+}
+ 
+var t = setInterval(printTime,1000);
+ 
+</script>
+   
+
+<br>
+<button onclick="p()">请输入用户名</button>
+<body>
+</body>
+</html>
